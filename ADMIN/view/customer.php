@@ -97,7 +97,7 @@
     <!-- Brand Logo -->
     <div class="brand-link">
       <img src="./PICTURE/logo.png" alt="AdminHMK Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <a href="trangchu.php"><span class="brand-text font-weight-light" style="font-weight: 1000!important;">OGANI </span></a>
+      <a href="../view/trangchu.php"><span class="brand-text font-weight-light" style="font-weight: 1000!important;">OGANI </span></a>
     <div>
 
     <!-- Sidebar -->
@@ -143,9 +143,9 @@
                     <th>Tên khách hàng</th>
                     <th>Số điện thoại</th>
                     <th>Username</th>
-                    <th>Password</th>
+                    
                     <th>Email</th>
-                    <th>Status</th>
+                    <th>Trạng thái</th>
                   </tr>
                   </thead>
                   <tbody id="user_content">
@@ -154,12 +154,15 @@
                     for($i = 0 ; $i< count($data);$i++){
                       echo '<tr>';
                       echo '<td class="serial">'.$data[$i]["userid"].'</td>';
-                      echo '<td>'.$data[$i]["email"].'</td>';
+                      echo '<td>'.$data[$i]["fullname"].'</td>';
                       echo '<td>'.$data[$i]["phone"].'</td>';
                       echo '<td>'.$data[$i]["username"].'</td>';
-                      echo '<td>'.$data[$i]["password"].'</td>';
+                      
                       echo '<td>'.$data[$i]["email"].'</td>';
                       echo '<td>complete</td>';
+                      echo '<td><button onclick="" type="button" class="btn btn-warning">XÓA</button></td>';
+                      echo '<td><button onclick="" type="button" class="btn btn-info">SỬA</button></td>';
+
                       echo'</tr>';
 
                     }
@@ -322,16 +325,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 </body>
